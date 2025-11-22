@@ -45,13 +45,13 @@ This project has *two separate workspaces*:
 ### 1️⃣ **Install frontend dependencies**
 
 ``` sh
-cd react-employee-table``
+cd react-employee-table
 npm install
 ```
 
 
 
-### Run the dev server
+### Run the Frontend
 ``npm run dev``
 
 The frontend will start on something like:
