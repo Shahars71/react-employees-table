@@ -43,7 +43,7 @@ export function EmployeesTableContainer({
           emp.experienceYears == Number.parseInt(yearsInput))
       );
     });
-  }, [nameInput, posInput, statInput, yearsInput]);
+  }, [nameInput, posInput, statInput, yearsInput, employeesData]);
 
   function handleChangeNameInput(e: ChangeEvent<HTMLInputElement>) {
     e.preventDefault();

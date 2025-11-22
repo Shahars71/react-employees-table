@@ -2,6 +2,7 @@ import EmployeesJson from "./resources/EmployeesData.json";
 
 import { EmployeesTableContainer } from "./EmployeesTableContainer";
 import { useEffect, useState } from "react";
+import { useTimeout } from "@mui/x-data-grid/internals";
 
 export type Employee = {
   name: string;
@@ -24,7 +25,7 @@ function App() {
   const [fetchedData, setfetchedData] = useState<Employee[]>([]);
 
   async function getEmployees(): Promise<Employee[]> {
-    const response = await fetch("http://localhost:3000/employees");
+    const response = await fetch("http://localhost:3000/Employee");
     if (!response.ok) {
       throw new Error(`HTTP ERROR! status: ${response.status}`);
     }
