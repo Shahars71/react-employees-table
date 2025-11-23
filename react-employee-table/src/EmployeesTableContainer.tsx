@@ -68,6 +68,12 @@ export function EmployeesTableContainer({
     setStatInput(e.target.value);
   }
 
+  function handleChangeYearsInput(e: ChangeEvent<HTMLInputElement>) {
+    var inputString: string = e.target.value
+    if (Number.parseInt(inputString) < 0) inputString = "0";
+    setYearsInput(inputString);
+  }
+
   function cleanInputsAndDisable(cleanPos: boolean, cleanSta: boolean) {
     if (cleanPos) {
       setEmptyAndDisable(setPosInput, setPosDisable);
@@ -144,7 +150,7 @@ export function EmployeesTableContainer({
               id="yearsFilter"
               type="number"
               value={yearsInput}
-              onChange={(e) => setYearsInput(e.target.value)}
+              onChange={handleChangeYearsInput}
               variant="outlined"
               label="Years Of Experience"
             ></TextField>
